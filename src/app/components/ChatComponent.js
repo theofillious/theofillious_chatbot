@@ -8,7 +8,7 @@ import MessageParser from "../MessageParser";
 const ChatComponent = () => {
 
     return (
-        <div>
+        <div className="chatbot-icon">
             <Chatbot
              config = {config}
              actionProvider = {ActionProvider}
