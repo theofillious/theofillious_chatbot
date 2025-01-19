@@ -1,8 +1,9 @@
-
+import ChatBot from "./compoents/ChatComponent";
 export default function Home() {
   return (
     <div >
-      
-    </div>
+      <ChatBot/>        
+      </div>
   );
+
 }
