@@ -24,12 +24,21 @@ const AutoComplete = ({ suggestions, onSelect }) => {
     onSelect(suggestion);
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter' && query) {
+      onSelect(query);
+      setQuery('');
+      setFilteredSuggestions([]);
+    }
+  };
+
   return (
     <div className="autocomplete-container">
       <input
         type="text"
         value={query}
         onChange={handleInputChange}
+         onKeyPress={handleKeyPress}
         placeholder="Ask something..."
       />
       <div className="suggestions">

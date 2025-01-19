@@ -21,18 +21,21 @@ const suggestions = [
  
 
 const ChatComponent = () => {
+    const actionProvider = new ActionProvider();
     const handleSelectSuggestion = (suggestion) => {
         actionProvider.handleSuggestion(suggestion);
     };
 
     return (
-        <div className="chatbot-icon">
-            <AutoComplete suggestions = {suggestions} onSelect = {handleSelectSuggestion} />
+        <div className="chatbot-container">
+            
             <Chatbot
              config = {config}
              actionProvider = {ActionProvider}
-             messageParser = {MessageParser}   
+             messageParser = {MessageParser}
+             messageHistory = {[]}   
             />
+            <AutoComplete suggestions = {suggestions} onSelect = {handleSelectSuggestion} />
         </div>
     )
     
