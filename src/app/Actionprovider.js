@@ -15,7 +15,7 @@ class ActionProvider {
 
     constructor( 
         createChatBotMessage,
-        setState,
+        setStateFunc,
         createClientMessage,
         stateRef,
         createCustomMessage,

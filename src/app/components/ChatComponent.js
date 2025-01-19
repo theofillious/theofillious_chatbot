@@ -1,5 +1,5 @@
 'use client'
-import ChatBot from "react-chatbot-kit";
+import Chatbot from "react-chatbot-kit";
 import 'react-chatbot-kit/build/main.css';
 import config from "../config";
 import ActionProvider from "../Actionprovider";
@@ -9,7 +9,7 @@ const ChatComponent = () => {
 
     return (
         <div>
-            <ChatBot
+            <Chatbot
              config = {config}
              actionProvider = {ActionProvider}
              messageParser = {MessageParser}   
