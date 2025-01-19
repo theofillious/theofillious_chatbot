@@ -1,6 +1,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --foreground-dark: #fff;
+  --background-dark: #000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,27 +31,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@keyframes colorChange {
+@keyframes glowing {
   0% {
-    color: rgba(255, 0, 0, 1); /* Red */
-  }
-  25% {
-    color: rgba(0, 255, 0, 1); /* Green */
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5), 0 0 10px rgba(255, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.5);
   }
   50% {
-    color: rgba(0, 0, 255, 1); /* Blue */
-  }
-  75% {
-    color: rgba(255, 255, 0, 1); /* Yellow */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.5), 0 0 30px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.5);
   }
   100% {
-    color: rgba(255, 0, 0, 1); /* Red */
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5), 0 0 10px rgba(255, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.5);
   }
 }
 
+/* Apply the glowing animation to the chatbot icon */
 .chatbot-icon {
-  -webkit-animation: colorChange 2s linear infinite;
-  animation: colorChange 2s linear infinite;
+  -webkit-animation: glowing 2s linear infinite;
+  animation: glowing 2s linear infinite;
 }
 
 * {
@@ -67,4 +64,60 @@ a {
   html {
     color-scheme: dark;
   }
+
+  
+  body {
+    color: var(--foreground-dark);
+    background: var(--background-dark);
+  }
+
+  .autocomplete-container input {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+  }
+
+  .suggestions {
+    background-color: #444;
+    border: 1px solid #555;
+  }
+
+  .suggestion-item {
+    color: #fff;
+  }
+
+  .suggestion-item:hover {
+    background-color: #555;
+  }  
+}
+
+.autocomplete-container {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.autocomplete-container input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
 }

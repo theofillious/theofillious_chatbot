@@ -48,7 +48,10 @@ class ActionProvider {
            }
         );
         return chatCompletion.choices[0].message.content;
-}
+ };  
+    handleSuggestion = (suggestion) => {
+    this.callGenAI(suggestion);
+};
 
 timer = ms => new Promise(res => setTimeout(res, ms));
 

@@ -1,6 +1,8 @@
 {
   "name": "theofillious_chatbot",
   "version": "0.1.0",
+  "description": "This AI chatbot is a car technical assistant that specialize with quick troubleshooting solutions in terms of emergency with your vehicle.",
+  "author": "Theofillious Masimong",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
