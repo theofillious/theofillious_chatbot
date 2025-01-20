@@ -23,7 +23,8 @@ body {
   margin: 0; /* Remove default margin */
 }
 
-body {
+
+--body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
@@ -31,7 +32,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@keyframes glowing {
+/* @keyframes glowing {
   0% {
     box-shadow: 0 0 5px rgba(255, 0, 0, 0.5), 0 0 10px rgba(255, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.5);
   }
@@ -41,12 +42,19 @@ body {
   100% {
     box-shadow: 0 0 5px rgba(255, 0, 0, 0.5), 0 0 10px rgba(255, 0, 0, 0.5), 0 0 15px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.5);
   }
-}
+} */
 
 /* Apply the glowing animation to the chatbot icon */
 .chatbot-icon {
-  -webkit-animation: glowing 2s linear infinite;
+  /*-webkit-animation: glowing 2s linear infinite;
   animation: glowing 2s linear infinite;
+  */box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  border: 1px solid grey rgba(0, 0, 0, 0.5);
+  -o-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
 }
 
 * {
