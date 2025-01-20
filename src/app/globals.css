@@ -64,60 +64,11 @@ a {
   html {
     color-scheme: dark;
   }
-
+ 
   
   body {
     color: var(--foreground-dark);
     background: var(--background-dark);
   }
-
-  .autocomplete-container input {
-    background-color: #333;
-    color: #fff;
-    border: 1px solid #555;
-  }
-
-  .suggestions {
-    background-color: #444;
-    border: 1px solid #555;
-  }
-
-  .suggestion-item {
-    color: #fff;
-  }
-
-  .suggestion-item:hover {
-    background-color: #555;
-  }  
 }
-
-.autocomplete-container {
-  position: relative;
-  width: 300px;
-  margin: 0 auto;
-}
-
-.autocomplete-container input {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.suggestions {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  z-index: 1000;
-}
-
-.suggestion-item {
-  padding: 10px;
-  cursor: pointer;
-}
-
-.suggestion-item:hover {
-  background-color: #f0f0f0;
-}
+  
