@@ -35,7 +35,7 @@ class ActionProvider {
                 messages: [
                     {
                         role: 'system',
-                        content: 'You are a car technical advisor .'
+                        content: 'You are a car technical advisor. Provide information in a step-by-step tutorial on how to fix a problem or detailed response. '
                     },
                     {
                         role: 'user',

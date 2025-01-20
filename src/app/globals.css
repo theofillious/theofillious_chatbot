@@ -48,7 +48,8 @@ body {
 .chatbot-icon {
   /*-webkit-animation: glowing 2s linear infinite;
   animation: glowing 2s linear infinite;
-  */box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  */
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   border: 1px solid grey rgba(0, 0, 0, 0.5);
   -o-border-radius: 20px;
   -webkit-border-radius: 20px;
